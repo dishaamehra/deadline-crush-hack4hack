@@ -1,0 +1,46 @@
+{
+  "name": "deadline-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --import tsx src/index.ts",
+    "worker": "node --import tsx src/worker.ts",
+    "seed": "node --import tsx src/seed.ts",
+    "reset-demo-password": "node --import tsx src/reset-demo-password.ts",
+    "test:email": "node --import tsx src/test-email.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.900.0",
+    "@aws-sdk/s3-request-presigner": "^3.900.0",
+    "bullmq": "^5.61.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "ioredis": "^5.8.0",
+    "ipaddr.js": "^2.2.0",
+    "mongoose": "^8.19.0",
+    "nodemailer": "^10.4.0",
+    "undici": "^7.16.0",
+    "yauzl": "^3.2.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.9",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.18.0",
+    "@types/nodemailer": "^7.0.0",
+    "@types/supertest": "^6.0.0",
+    "@types/yauzl": "^2.10.3",
+    "mongodb-memory-server": "^10.2.0",
+    "supertest": "^7.1.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.1.12"
+  }
+}

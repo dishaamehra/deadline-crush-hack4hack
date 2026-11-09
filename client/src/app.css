@@ -1,0 +1,388 @@
+body {
+  line-height: 1.6;
+}
+h1 {
+  letter-spacing: -0.045em;
+}
+button,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+header nav {
+  margin-right: auto;
+}
+.theme {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+}
+.theme select {
+  width: 88px;
+  padding: 4px;
+  border: 0;
+  background: transparent;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+.page {
+  padding-block: 45px 70px;
+  min-height: 65vh;
+}
+.page h1 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.12;
+  margin: 8px 0 18px;
+}
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.box {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  margin: 20px 0;
+}
+.box h2 {
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+.box h3 {
+  margin: 0 0 8px;
+}
+form {
+  display: grid;
+  gap: 14px;
+}
+label {
+  display: grid;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+label input,
+label textarea,
+label select {
+  width: 100%;
+  font-weight: 400;
+}
+input,
+textarea,
+select {
+  min-height: 40px;
+}
+textarea {
+  font: inherit;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--text);
+  resize: vertical;
+}
+input[type="checkbox"] {
+  width: 20px;
+  min-height: 20px;
+}
+.two-col,
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.form-grid label:has(textarea) {
+  grid-column: 1/-1;
+}
+.workspace-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 24px;
+}
+.workspace-grid aside .box:first-child {
+  background: var(--tint);
+}
+.error,
+.warning {
+  padding: 12px 16px;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+.error {
+  background: #ffe7e7;
+  color: #8b2020;
+  border: 1px solid #f0b4b4;
+}
+.warning {
+  background: #fff1ca;
+  color: #684d00;
+}
+.callout {
+  padding: 15px;
+  background: var(--tint);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.callout svg {
+  flex-shrink: 0;
+}
+.auth-page {
+  max-width: 470px;
+  margin: 55px auto;
+  padding: 0 15px;
+  min-height: 62vh;
+}
+.auth-page h1 {
+  font-size: 36px;
+  line-height: 1.1;
+}
+.wide {
+  width: 100%;
+}
+.text-button {
+  border: 0;
+  background: transparent;
+  margin-top: 15px;
+}
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+.upload-row {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-block: 14px;
+}
+.upload-row small,
+.member small,
+.ledger small,
+td small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+.upload-row strong {
+  overflow-wrap: anywhere;
+}
+.member {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 10px;
+}
+.member button {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 30px;
+  background: var(--tint);
+  border: 1px solid var(--line);
+  font-size: 12px;
+}
+.receipt {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 8px;
+}
+.receipt dd {
+  overflow-wrap: anywhere;
+  font-size: 13px;
+}
+.readme {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: var(--tint);
+  padding: 16px;
+  max-height: 400px;
+  overflow: auto;
+  font-size: 13px;
+}
+.ledger {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 28px;
+}
+.metrics .box {
+  margin: 0;
+}
+.metrics strong {
+  display: block;
+  font-size: 36px;
+  line-height: 1.2;
+}
+.metrics small {
+  text-transform: capitalize;
+}
+.table-wrap {
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th,
+td {
+  padding: 13px 10px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  font-weight: 600;
+  background: var(--tint);
+}
+td {
+  overflow-wrap: anywhere;
+  max-width: 270px;
+}
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  background: var(--tint);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+.filter-grid label {
+  text-transform: capitalize;
+}
+.notification {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.prose p,
+.prose {
+  white-space: pre-line;
+}
+.hero-placeholder {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 45px;
+  background: var(--tint);
+}
+.skeleton {
+  height: 240px;
+  background: var(--tint);
+  border-radius: 16px;
+  margin-top: 25px;
+}
+.loading {
+  padding: 65px 0;
+}
+.stats dd {
+  font-size: 14px;
+}
+.registration .wide {
+  margin: 10px 0;
+}
+.hero .art strong {
+  font-size: 46px;
+}
+.card .art strong {
+  font-size: 29px;
+}
+.detail-art strong {
+  font-size: clamp(36px, 5vw, 65px);
+}
+.card .save {
+  display: flex;
+}
+.card .error {
+  margin: 10px;
+}
+.form-grid label {
+  min-width: 0;
+}
+@media (max-width: 850px) {
+  .workspace-grid {
+    grid-template-columns: 1fr;
+  }
+  .workspace-grid aside {
+    grid-row: 1;
+  }
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  header nav a:nth-child(n + 2) {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .two-col,
+  .form-grid,
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+  .box {
+    padding: 18px;
+  }
+  .page-heading,
+  .upload-row {
+    align-items: start;
+    flex-direction: column;
+  }
+  .receipt {
+    grid-template-columns: 90px minmax(0, 1fr);
+  }
+  .notification {
+    flex-direction: column;
+  }
+  .theme select {
+    width: 77px;
+  }
+  header {
+    font-size: 12px;
+  }
+  header .brand {
+    font-size: 16px;
+  }
+  header .brand b {
+    padding: 4px 6px;
+  }
+  .metrics {
+    gap: 10px;
+  }
+  .metrics strong {
+    font-size: 28px;
+  }
+  .hero .art strong {
+    font-size: 35px;
+  }
+}

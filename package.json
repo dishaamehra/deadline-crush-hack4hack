@@ -1,0 +1,27 @@
+{
+  "name": "hack4hack-platform-extension",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web,worker \"npm run dev -w server\" \"npm run dev -w client\" \"npm run worker -w server\"",
+    "build": "npm run build --workspaces",
+    "test": "npm run test -w server",
+    "seed": "npm run seed -w server",
+    "reset-demo-password": "npm run reset-demo-password -w server",
+    "test:email": "npm run test:email -w server",
+    "typecheck": "npm run typecheck --workspaces",
+    "test:ui": "node scripts/ui-smoke.cjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "jsdom": "^27.4.0",
+    "prettier": "^3.6.2"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}
