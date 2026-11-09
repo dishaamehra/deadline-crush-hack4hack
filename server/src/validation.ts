@@ -24,6 +24,9 @@ export async function checkLink(value: string, redirects = 0): Promise<void> {
     connect: {
       lookup: (_host, _options, callback: any) =>
         callback(null, chosen.address, chosen.family),
+        family: chosen.family,
+        autoSelectFamily: false,
+
     },
   });
   try {
